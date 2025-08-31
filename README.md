@@ -69,4 +69,4 @@ Contributions are welcome! To contribute to myPortfolio, follow these steps:
 6. Create a new Pull Request
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
