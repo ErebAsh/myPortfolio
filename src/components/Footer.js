@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div>
-        Made with <span style={{ color: '#39ff14' }}>❤️</span> by Himanshu Raj
+        Built with a passion for what I do. 
       </div>
       <a href="/Himanshu_Raj_Resume.pdf" download="Himanshu_Raj_Resume.pdf">
         <button>Download CV</button>

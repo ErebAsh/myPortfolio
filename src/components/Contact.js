@@ -34,7 +34,7 @@ const Contact = () => {
             style={{
               padding: '0.75rem',
               borderRadius: '8px',
-              border: 'none',
+              border: '1px solid #ccc',
               marginBottom: '1rem',
               fontSize: '1rem',
             }}
@@ -51,7 +51,7 @@ const Contact = () => {
             style={{
               padding: '0.75rem',
               borderRadius: '8px',
-              border: 'none',
+              border: '1px solid #ccc',
               marginBottom: '1rem',
               fontSize: '1rem',
             }}
@@ -68,14 +68,25 @@ const Contact = () => {
             style={{
               padding: '0.75rem',
               borderRadius: '8px',
-              border: 'none',
+              border: '1px solid #ccc',
               marginBottom: '1rem',
               fontSize: '1rem',
               resize: 'vertical',
             }}
           />
 
-          <button type="submit" style={{ alignSelf: 'flex-start' }}>Send Message</button>
+          <button type="submit" style={{
+            alignSelf: 'flex-start',
+            padding: '0.75rem 1.5rem',
+            border: 'none',
+            borderRadius: '8px',
+            backgroundColor: '#00fff7',
+            color: '#000',
+            fontWeight: '600',
+            cursor: 'pointer'
+          }}>
+            Send Message
+          </button>
         </form>
 
         {submitted && (
@@ -83,16 +94,6 @@ const Contact = () => {
             Thank you for reaching out! I will get back to you soon.
           </p>
         )}
-
-        <div style={{ marginTop: '2rem', color: '#8b949e' }}>
-          <p>Email: <a href="mailto:hr7207096@gmail.com" style={{ color: '#00fff7' }}>hr7207096@gmail.com</a></p>
-          <p>
-            LinkedIn: <a href="https://www.linkedin.com/in/himanshurajjnu" target="_blank" rel="noopener noreferrer" style={{ color: '#00fff7' }}>linkedin.com/in/himanshurajjnu</a>
-          </p>
-          <p>
-            GitHub: <a href="https://github.com/ErebAsh" target="_blank" rel="noopener noreferrer" style={{ color: '#00fff7' }}>github.com/ErebAsh</a>
-          </p>
-        </div>
       </div>
     </section>
   );
