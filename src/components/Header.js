@@ -2,9 +2,24 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header>
-      <div className="neon-text" style={{ fontSize: '1.5rem' }}>
-        Himanshu Raj
+    <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 2rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}> {/* Container for image and name */}
+        {/* Using the image from the public folder */}
+        <img
+          src={process.env.PUBLIC_URL + '/hello.png'}
+          alt="Himanshu Raj"
+          style={{
+            width: '40px', // Smaller size for the header
+            height: '40px',
+            borderRadius: '50%',
+            objectFit: 'cover',
+            border: '2px solid #39ff14', // Reduced border size
+            boxShadow: '0 0 8px #39ff14', // Reduced shadow size
+          }}
+        />
+        <div className="neon-text" style={{ fontSize: '1.5rem' }}>
+          Himanshu Raj
+        </div>
       </div>
       <nav>
         <a href="#about">About</a>
@@ -13,8 +28,8 @@ const Header = () => {
         <a href="#projects">Projects</a>
         <a href="#internship">Internship</a>
         <a href="#contact">Contact</a>
-        <a href="/Himanshu_Raj_Resume.pdf" download="Himanshu_Raj_Resume.pdf">
-          <button>Download CV</button>
+        <a href={process.env.PUBLIC_URL + "/Himanshu_Raj_Resume.pdf"} download="Himanshu_Raj_Resume.pdf">
+          <button>Download Resume</button>
         </a>
       </nav>
     </header>

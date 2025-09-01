@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
+  // Using a 'status' string for more detailed feedback
+  const [status, setStatus] = useState('');
 
   // Handle input changes
   const handleChange = (e) => {
@@ -11,11 +12,33 @@ const Contact = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can add form validation or send data to backend/email service
-    setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
+    setStatus('Sending...'); // Show feedback that the form is being sent
+
+    try {
+      // Send a POST request to your Formspree endpoint
+      const response = await fetch('https://formspree.io/f/xpwjloov', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // If the submission is successful
+        setStatus('Thank you for reaching out! I will get back to you soon.');
+        setFormData({ name: '', email: '', message: '' }); // Reset form fields
+      } else {
+        // If there's an error from the server
+        setStatus('Oops! There was a problem submitting your form.');
+      }
+    } catch (error) {
+      // If there's a network error
+      setStatus('Oops! There was a problem submitting your form.');
+    }
   };
 
   return (
@@ -23,6 +46,7 @@ const Contact = () => {
       <h2>Contact Me</h2>
       <div style={{ maxWidth: '600px', margin: '2rem auto' }}>
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
+          {/* Your input fields remain the same */}
           <label htmlFor="name" style={{ marginBottom: '0.5rem' }}>Name</label>
           <input
             id="name"
@@ -89,9 +113,10 @@ const Contact = () => {
           </button>
         </form>
 
-        {submitted && (
+        {/* Display the status message */}
+        {status && (
           <p style={{ marginTop: '1rem', color: '#39ff14', fontWeight: '600' }}>
-            Thank you for reaching out! I will get back to you soon.
+            {status}
           </p>
         )}
       </div>

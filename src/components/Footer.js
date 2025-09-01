@@ -7,7 +7,7 @@ const Footer = () => {
         Built with a passion for what I do. 
       </div>
       <a href="/Himanshu_Raj_Resume.pdf" download="Himanshu_Raj_Resume.pdf">
-        <button>Download CV</button>
+        <button>Download Resume</button>
       </a>
     </footer>
   );
