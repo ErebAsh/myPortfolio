@@ -3,18 +3,18 @@ import React from 'react';
 const Header = () => {
   return (
     <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 2rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}> {/* Container for image and name */}
-        {/* Using the image from the public folder */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+  
         <img
           src={process.env.PUBLIC_URL + '/hello.png'}
           alt="Himanshu Raj"
           style={{
-            width: '40px', // Smaller size for the header
+            width: '40px',
             height: '40px',
             borderRadius: '50%',
             objectFit: 'cover',
-            border: '2px solid #39ff14', // Reduced border size
-            boxShadow: '0 0 8px #39ff14', // Reduced shadow size
+            border: '2px solid #39ff14', 
+            boxShadow: '0 0 8px #39ff14',
           }}
         />
         <div className="neon-text" style={{ fontSize: '1.5rem' }}>
