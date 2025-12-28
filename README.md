@@ -14,7 +14,7 @@ To get started with myPortfolio, follow these steps:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/myPortfolio.git
+git clone https://github.com/ErebAsh/myPortfolio.git
 ```
 
 2. Install dependencies:
