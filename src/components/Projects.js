@@ -2,9 +2,9 @@ import React from 'react';
 
 const projects = [
   {
-    title: 'AI-Powered Student Performance Predictor',
-    description: 'A machine learning model that predicts student academic performance based on historical data.',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
+    title: 'AI Based Resume Builder',
+    description: 'Select a template and securely fill in your details; an LLM then automatically generates a polished, professionally formatted, and easily downloadable resume.',
+    image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80',
     link: '#',
   },
   {
@@ -15,9 +15,9 @@ const projects = [
   },
   {
     title: 'Chatbot with NLP',
-    description: 'A chatbot built with Python and NLP libraries that can answer FAQs and assist students.',
+    description: 'An intelligent companion providing human-like conversational experience and engaging in friendly, natural dialogue.',
     image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80',
-    link: '#',
+    link: 'https://erebash-eunoia.hf.space/',
   },
 ];
 

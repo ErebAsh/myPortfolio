@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const closeMenu = () => setIsOpen(false);
+
   return (
-    <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 2rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-  
+    <header className="header">
+      <div className="logo-container" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
         <img
           src={process.env.PUBLIC_URL + '/hello.png'}
           alt="Himanshu Raj"
@@ -21,15 +24,22 @@ const Header = () => {
           Himanshu Raj
         </div>
       </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#internship">Internship</a>
-        <a href="#contact">Contact</a>
+
+      <div className={`hamburger ${isOpen ? 'active' : ''}`} onClick={() => setIsOpen(!isOpen)}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+
+      <nav className={`nav ${isOpen ? 'open' : ''}`}>
+        <a href="#about" onClick={closeMenu}>About</a>
+        <a href="#education" onClick={closeMenu}>Education</a>
+        <a href="#skills" onClick={closeMenu}>Skills</a>
+        <a href="#projects" onClick={closeMenu}>Projects</a>
+        <a href="#internship" onClick={closeMenu}>Internship</a>
+        <a href="#contact" onClick={closeMenu}>Contact</a>
         <a href={process.env.PUBLIC_URL + "/Himanshu_Raj_Resume.pdf"} download="Himanshu_Raj_Resume.pdf">
-          <button>Download Resume</button>
+          <button onClick={closeMenu}>Download Resume</button>
         </a>
       </nav>
     </header>
