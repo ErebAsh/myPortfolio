@@ -5,7 +5,7 @@ const projects = [
     title: 'AI Based Resume Builder',
     description: 'Select a template and securely fill in your details; an LLM then automatically generates a polished, professionally formatted, and easily downloadable resume.',
     image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80',
-    link: '#',
+    link: 'https://github.com/ErebAsh/artius-lab',
   },
   {
     title: 'Sales Dashboard using Power BI',
